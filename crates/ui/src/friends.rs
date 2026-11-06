@@ -411,48 +411,58 @@ impl MessagingUi {
 	) {
 		let colors = design::palette(ui);
 		let language = self.language;
-		egui::Frame::new()
-			.inner_margin(egui::Margin::symmetric(16, 8))
-			.show(ui, |ui| {
-				ui.horizontal_wrapped(|ui| {
-					ui.set_min_height(32.0);
-					ui.spacing_mut().item_spacing.x = 8.0;
-					icons::inline(ui, Icon::People, 20.0, colors.muted);
-					ui.label(
-						design::semibold(ui, language.text("friends"), 16.0)
-							.color(colors.text_strong),
-					);
-					let (rule, _) = ui.allocate_exact_size(vec2(17.0, 24.0), egui::Sense::hover());
-					ui.painter().vline(
-						rule.center().x,
-						rule.y_range(),
-						egui::Stroke::new(1.0, colors.border),
-					);
-					for (tab, title) in [
-						(Tab::Online, language.text("friends-online")),
-						(Tab::All, language.text("friends-all")),
-						(Tab::Pending, language.text("friends-pending")),
-						(Tab::Restricted, language.text("friends-blocked-ignored")),
-						(Tab::Add, language.text("friends-add")),
-					] {
-						let count = (tab == Tab::Pending)
-							.then(|| {
-								state
-									.pending_friends()
-									.filter(|(_, _, incoming)| *incoming)
-									.count()
-							})
-							.filter(|count| *count > 0);
-						if header_tab(ui, &title, count, self.friends.tab == tab, tab == Tab::Add)
+		ui.scope(|ui| {
+			ui.spacing_mut().item_spacing.y = 0.0;
+			egui::Frame::new()
+				.inner_margin(egui::Margin::symmetric(16, 0))
+				.show(ui, |ui| {
+					ui.horizontal_wrapped(|ui| {
+						ui.set_min_height(44.5);
+						ui.spacing_mut().item_spacing.x = 8.0;
+						icons::inline(ui, Icon::People, 20.0, colors.muted);
+						ui.label(
+							design::semibold(ui, language.text("friends"), 16.0)
+								.color(colors.text_strong),
+						);
+						let (rule, _) =
+							ui.allocate_exact_size(vec2(17.0, 24.0), egui::Sense::hover());
+						ui.painter().vline(
+							rule.center().x,
+							rule.y_range(),
+							egui::Stroke::new(1.0, colors.border),
+						);
+						for (tab, title) in [
+							(Tab::Online, language.text("friends-online")),
+							(Tab::All, language.text("friends-all")),
+							(Tab::Pending, language.text("friends-pending")),
+							(Tab::Restricted, language.text("friends-blocked-ignored")),
+							(Tab::Add, language.text("friends-add")),
+						] {
+							let count = (tab == Tab::Pending)
+								.then(|| {
+									state
+										.pending_friends()
+										.filter(|(_, _, incoming)| *incoming)
+										.count()
+								})
+								.filter(|count| *count > 0);
+							if header_tab(
+								ui,
+								&title,
+								count,
+								self.friends.tab == tab,
+								tab == Tab::Add,
+							)
 							.clicked() && self.friends.tab != tab
-						{
-							self.friends.tab = tab;
-							self.friends.query.clear();
+							{
+								self.friends.tab = tab;
+								self.friends.query.clear();
+							}
 						}
-					}
+					});
 				});
-			});
-		ui.separator();
+			ui.separator();
+		});
 		if matches!(self.friends.tab, Tab::Online | Tab::All)
 			&& state.gateway_connected
 			&& state.startup_warnings.presence
