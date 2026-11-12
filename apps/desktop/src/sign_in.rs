@@ -1032,9 +1032,8 @@ impl Desktop {
 				.show(ui, |ui| {
 					ui.spacing_mut().item_spacing.y = 6.0;
 					for line in [
-						"Messaging, reactions, search and read markers have offline tests. Real Discord interoperability is still unverified; attachment uploads and advanced search remain incomplete.",
-						"Messages and drafts are cached locally. Login tokens use the operating system credential store.",
-						"Unofficial clients may put your Discord account at risk.",
+						"Serein is an unofficial Discord client. It communicates directly with Discord's public gateway and REST endpoints for your existing account. Automating normal accounts outside the official OAuth2/bot API violates Discord's Terms of Service.",
+						"Using Serein may put your Discord account at risk.",
 					] {
 						ui.add(
 							egui::Label::new(

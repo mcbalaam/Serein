@@ -1643,13 +1643,13 @@ main-restoring-screen-welcome-back = tekrar hoşgeldiniz
 # Context: sign_in_accounts
 main-sign-in-accounts-saved-accounts = Kayıtlı hesaplar
 # Context: sign_in_consent
-main-sign-in-consent-passwords-and-2fa-stay-on-discord-s-own-login-page = Şifreler ve 2FA, Discord'un kendi giriş sayfasında kalır; İşletim sisteminizin kimlik bilgileri deposunda yalnızca oturum belirteci tutulur.
+main-sign-in-consent-passwords-and-2fa-stay-on-discord-s-own-login-page = Serein şifrenizi veya 2FA kodunuzu kullanmaz ya da saklamaz. Yalnızca oturum belirteci işletim sisteminizin kimlik bilgileri deposuna kaydedilir.
 # Context: sign_in_disclosures
 main-sign-in-disclosures-about-serein = Serein hakkında
 # Context: sign_in_disclosures
 main-sign-in-disclosures-connect-with-this-token = Bu jetonla bağlanın
 # Context: sign_in_disclosures
-main-sign-in-disclosures-for-owners-who-already-hold-a-valid-discord-session-token = Halihazırda geçerli bir Discord oturum jetonuna sahip olan sahipler için (örneğin oturum açılmış başka bir Serein kurulumundan). Şifreler ve 2FA burada asla kullanılmaz; bu, Discord'un barındırılan giriş sayfasını tamamen atlar.
+main-sign-in-disclosures-for-owners-who-already-hold-a-valid-discord-session-token = Discord'da zaten açık bir oturumunuz varsa, bunu burada Serein ile kullanabilirsiniz.
 # Context: sign_in_disclosures
 main-sign-in-disclosures-forget-saved-login = Kayıtlı girişi unut
 # Context: sign_in_disclosures

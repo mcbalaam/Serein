@@ -1670,13 +1670,13 @@ main-restoring-screen-welcome-back = Vítejte zpět
 # Context: sign_in_accounts
 main-sign-in-accounts-saved-accounts = Uložené účty
 # Context: sign_in_consent
-main-sign-in-consent-passwords-and-2fa-stay-on-discord-s-own-login-page = Hesla a 2FA zůstávají na vlastní přihlašovací stránce Discordu; ve vašem úložišti pověření OS je zachován pouze token relace.
+main-sign-in-consent-passwords-and-2fa-stay-on-discord-s-own-login-page = Serein nepoužívá ani neukládá vaše heslo nebo kód 2FA. V úložišti přihlašovacích údajů vašeho systému uchovává pouze token relace.
 # Context: sign_in_disclosures
 main-sign-in-disclosures-about-serein = O Serein
 # Context: sign_in_disclosures
 main-sign-in-disclosures-connect-with-this-token = Spojte se s tímto tokenem
 # Context: sign_in_disclosures
-main-sign-in-disclosures-for-owners-who-already-hold-a-valid-discord-session-token = Pro vlastníky, kteří již mají platný token relace Discord, například z jiné přihlášené instalace Serein. Hesla a 2FA se zde nikdy nepoužívají; to zcela obchází hostovanou přihlašovací stránku Discordu.
+main-sign-in-disclosures-for-owners-who-already-hold-a-valid-discord-session-token = Pokud už máte aktivní relaci Discordu, můžete ji zde použít se Sereinem.
 # Context: sign_in_disclosures
 main-sign-in-disclosures-forget-saved-login = Zapomeňte uložené přihlašovací údaje
 # Context: sign_in_disclosures

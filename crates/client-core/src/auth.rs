@@ -12,29 +12,29 @@ pub enum AuthState {
 }
 #[derive(Clone, Copy, Debug, PartialEq, Eq, thiserror::Error)]
 pub enum Failure {
-	#[error("Session expired; authenticated traffic stopped")]
+	#[error("Session expired; re-login manually")]
 	Expired,
-	#[error("Verification challenge unsupported; complete it in an official flow")]
+	#[error("Security challenge; unable to display captcha")]
 	Challenged,
-	#[error("Permission denied")]
+	#[error("Forbidden (403)")]
 	Forbidden,
-	#[error("Rate limited; wait for the service cooldown before retrying")]
+	#[error("Rate limited; wait before retrying")]
 	RateLimited,
-	#[error("Connection failed; no automatic write retry")]
+	#[error("Network connection failed")]
 	Network,
-	#[error("Outcome unknown; inspect the conversation before a deliberate retry")]
+	#[error("Something went wrong")]
 	Ambiguous,
-	#[error("Service response rejected or incompatible")]
+	#[error("Unknown server response")]
 	Protocol,
 	// Only compile-time labels are allowed here, never remote text, IDs or decode errors.
 	#[error("{0}")]
 	ProtocolAt(&'static str),
-	#[error("Safe session capacity exceeded; connection stopped")]
+	#[error("Too much data received; wait before retrying")]
 	Capacity,
 	// Fixed local labels only; never include remote payloads or account identifiers.
 	#[error("{0}")]
 	CapacityAt(&'static str),
-	#[error("Only an owner-supplied normal-user session is supported")]
+	#[error("Invalid session or bot account rejected")]
 	InvalidCredential,
 }
 impl Failure {
@@ -47,16 +47,16 @@ impl Failure {
 	}
 	pub fn label(self) -> &'static str {
 		match self {
-			Self::Expired => "Session expired · reconnect explicitly; drafts remain in RAM",
-			Self::Challenged => "Security challenge · unsupported here; connection stopped",
-			Self::Forbidden => "Permission denied",
-			Self::RateLimited => "Rate limited · wait before retrying",
-			Self::Network => "Connection failed",
-			Self::Ambiguous => "Outcome unknown · check the official client before retrying",
-			Self::Protocol => "Unsupported service response",
+			Self::Expired => "Session expired; re-login manually",
+			Self::Challenged => "Security challenge; unable to display captcha",
+			Self::Forbidden => "Forbidden (403)",
+			Self::RateLimited => "Rate limited; wait before retrying",
+			Self::Network => "Network connection failed",
+			Self::Ambiguous => "Something went wrong",
+			Self::Protocol => "Unknown server response",
 			Self::ProtocolAt(stage) | Self::CapacityAt(stage) => stage,
-			Self::Capacity => "Safe capacity exceeded · connection stopped",
-			Self::InvalidCredential => "Invalid session input or bot account rejected",
+			Self::Capacity => "Too much data received; wait before retrying",
+			Self::InvalidCredential => "Invalid session or bot account rejected",
 		}
 	}
 	pub fn ends_session(self) -> bool {

@@ -1658,13 +1658,13 @@ main-restoring-screen-welcome-back = 歡迎回來
 # Context: sign_in_accounts
 main-sign-in-accounts-saved-accounts = 已儲存的帳戶
 # Context: sign_in_consent
-main-sign-in-consent-passwords-and-2fa-stay-on-discord-s-own-login-page = 密碼與 2FA 只留在 Discord 自己的登入頁；僅工作階段令牌會存進你的作業系統憑證儲存區。
+main-sign-in-consent-passwords-and-2fa-stay-on-discord-s-own-login-page = Serein 不會使用或儲存你的密碼或 2FA 驗證碼。只有工作階段令牌會儲存在作業系統的憑證儲存區。
 # Context: sign_in_disclosures
 main-sign-in-disclosures-about-serein = 關於 Serein
 # Context: sign_in_disclosures
 main-sign-in-disclosures-connect-with-this-token = 用這個令牌連線
 # Context: sign_in_disclosures
-main-sign-in-disclosures-for-owners-who-already-hold-a-valid-discord-session-token = 供已持有有效 Discord 工作階段令牌的使用者使用，例如來自另一套已登入的 Serein。這裡絕不會用到密碼與 2FA，且完全略過 Discord 的託管登入頁。
+main-sign-in-disclosures-for-owners-who-already-hold-a-valid-discord-session-token = 如果你已登入 Discord，可以在這裡將該工作階段用於 Serein。
 # Context: sign_in_disclosures
 main-sign-in-disclosures-forget-saved-login = 清除已儲存的登入
 # Context: sign_in_disclosures

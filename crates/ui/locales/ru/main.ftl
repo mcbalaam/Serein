@@ -1643,13 +1643,13 @@ main-restoring-screen-welcome-back = Добро пожаловать
 # Context: sign_in_accounts
 main-sign-in-accounts-saved-accounts = Сохраненные аккаунты
 # Context: sign_in_consent
-main-sign-in-consent-passwords-and-2fa-stay-on-discord-s-own-login-page = Пароли и 2FA остаются на собственной странице входа в Discord; в хранилище учетных данных вашей ОС сохраняется только токен сеанса.
+main-sign-in-consent-passwords-and-2fa-stay-on-discord-s-own-login-page = Serein не использует и не хранит ваш пароль или код 2FA. В хранилище вашей ОС сохраняется только токен сеанса.
 # Context: sign_in_disclosures
 main-sign-in-disclosures-about-serein = О Серейн
 # Context: sign_in_disclosures
 main-sign-in-disclosures-connect-with-this-token = Подключиться с помощью этого токена
 # Context: sign_in_disclosures
-main-sign-in-disclosures-for-owners-who-already-hold-a-valid-discord-session-token = Для владельцев, у которых уже есть действующий токен сеанса Discord, например, из другой установки Serein, вошедшей в систему. Пароли и 2FA здесь никогда не используются; это полностью обходит размещенную страницу входа в Discord.
+main-sign-in-disclosures-for-owners-who-already-hold-a-valid-discord-session-token = Если вы уже вошли в Discord, эту сессию можно использовать в Serein.
 # Context: sign_in_disclosures
 main-sign-in-disclosures-forget-saved-login = Забыть сохраненный логин
 # Context: sign_in_disclosures

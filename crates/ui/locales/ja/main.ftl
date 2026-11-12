@@ -1643,13 +1643,13 @@ main-restoring-screen-welcome-back = おかえり
 # Context: sign_in_accounts
 main-sign-in-accounts-saved-accounts = 保存されたアカウント
 # Context: sign_in_consent
-main-sign-in-consent-passwords-and-2fa-stay-on-discord-s-own-login-page = パスワードと 2FA は Discord 自体のログイン ページに残ります。セッション トークンのみが OS 資格情報ストアに保持されます。
+main-sign-in-consent-passwords-and-2fa-stay-on-discord-s-own-login-page = Serein はパスワードや 2FA コードを使用・保存しません。セッション トークンのみを OS の認証情報ストアに保存します。
 # Context: sign_in_disclosures
 main-sign-in-disclosures-about-serein = セレインについて
 # Context: sign_in_disclosures
 main-sign-in-disclosures-connect-with-this-token = このトークンで接続します
 # Context: sign_in_disclosures
-main-sign-in-disclosures-for-owners-who-already-hold-a-valid-discord-session-token = サインインした別の Serein インストールなどから、すでに有効な Discord セッション トークンを保持しているオーナーの場合。ここではパスワードと 2FA は決して使用されません。これにより、Discord がホストするログイン ページが完全にバイパスされます。
+main-sign-in-disclosures-for-owners-who-already-hold-a-valid-discord-session-token = Discord にログイン中であれば、そのセッションをここで Serein に使用できます。
 # Context: sign_in_disclosures
 main-sign-in-disclosures-forget-saved-login = 保存したログイン情報を忘れる
 # Context: sign_in_disclosures

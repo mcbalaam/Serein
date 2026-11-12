@@ -1642,13 +1642,13 @@ main-restoring-screen-welcome-back = bem vindo de volta
 # Context: sign_in_accounts
 main-sign-in-accounts-saved-accounts = Contas salvas
 # Context: sign_in_consent
-main-sign-in-consent-passwords-and-2fa-stay-on-discord-s-own-login-page = As senhas e 2FA permanecem na página de login do Discord; apenas o token da sessão é mantido no armazenamento de credenciais do seu sistema operacional.
+main-sign-in-consent-passwords-and-2fa-stay-on-discord-s-own-login-page = O Serein não usa nem armazena sua senha ou seu código 2FA. Apenas o token da sessão é salvo no armazenamento de credenciais do seu sistema operacional.
 # Context: sign_in_disclosures
 main-sign-in-disclosures-about-serein = Sobre Serein
 # Context: sign_in_disclosures
 main-sign-in-disclosures-connect-with-this-token = Conecte-se com este token
 # Context: sign_in_disclosures
-main-sign-in-disclosures-for-owners-who-already-hold-a-valid-discord-session-token = Para proprietários que já possuem um token de sessão Discord válido, por exemplo, de outra instalação do Serein conectada. Senhas e 2FA nunca são usados ​​aqui; isso ignora totalmente a página de login hospedada do Discord.
+main-sign-in-disclosures-for-owners-who-already-hold-a-valid-discord-session-token = Se você já tem uma sessão ativa do Discord, pode usá-la aqui com o Serein.
 # Context: sign_in_disclosures
 main-sign-in-disclosures-forget-saved-login = Esqueci o login salvo
 # Context: sign_in_disclosures
